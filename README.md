@@ -1,0 +1,2 @@
+# easy-crypto
+# wordle-solving

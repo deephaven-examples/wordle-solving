@@ -1,0 +1,48 @@
+version: "3.4"
+
+services:
+  server:
+    image: wordle-solving/ws-server
+    expose:
+      - '8080'
+    volumes:
+      - ./data:/data
+      - ./data/notebooks:/data/notebooks
+      - api-cache:/cache
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx6g -Ddeephaven.console.type=python -Ddeephaven.application.dir=/app.d
+
+  web:
+    image: wordle-solving/ws-web
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx4g
+    expose:
+      - '80'
+    volumes:
+      - ./data:/data
+      - ./data/layouts:/data/layouts
+      - ./data/notebooks:/data/notebooks
+      - web-tmp:/tmp
+
+  grpc-proxy:
+    image: ghcr.io/deephaven/grpc-proxy:${VERSION:-latest}
+    environment:
+      - BACKEND_ADDR=server:8080
+    depends_on:
+      - server
+    expose:
+      - '8080'
+
+  envoy:
+    image: ghcr.io/deephaven/envoy:${VERSION:-latest}
+    depends_on:
+      - web
+      - grpc-proxy
+      - server
+    ports:
+      - "${PORT:-10000}:10000"
+
+volumes:
+    web-tmp:
+    api-cache:
+    server-cache:

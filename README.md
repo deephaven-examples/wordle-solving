@@ -4,7 +4,7 @@ This repository integrates [Deephaven](http://deephaven.io/) with [Twitter](http
 
  Running `./wordle-solver.sh` will create all the needed tables in Deephaven.
 
- Open deephaven on [http://localhost:10000/ide](http://localhost:10000/ide) to edit and run the scirpts.
+ Open Deephaven on [http://localhost:10000/ide](http://localhost:10000/ide) to edit and run the scripts.
 
 ## Overview
 

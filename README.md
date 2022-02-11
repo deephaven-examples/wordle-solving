@@ -2,7 +2,9 @@
 
 This repository integrates [Deephaven](http://deephaven.io/) with [Twitter](https://twitter.com/) to solve [WORDLE](https://wordle.at/) in one guess, without knowing any possible letters.
 
- Running `./wordle-solver.sh` will create open deephaven on [http://localhost:10000/ide](http://localhost:10000/ide).
+ Running `./wordle-solver.sh` will create all the needed tables in Deephaven.
+
+ Open deephaven on [http://localhost:10000/ide](http://localhost:10000/ide) to edit and run the scirpts.
 
 ## Overview
 

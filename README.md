@@ -85,7 +85,7 @@ Finally, we want to count how many times each word appears in the results column
 
 This really shows the power of large, dynamic data sets. Even though this data is anonymous and we do not know the letters or words of each tweet, it's impressive to see the right answer emerge at the top of our results table.
 
-What other anonymous dataset can this be applied to? Let us know by joining our [Slack community](https://deephavencommunity.slack.com/ssb/redirect).
+What other anonymous dataset can this be applied to? Let us know by joining our [Slack community](https://deephaven.io/slack).
 
 ## Correct word
 

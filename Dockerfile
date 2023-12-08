@@ -1,4 +1,4 @@
-FROM ghcr.io/deephaven/server:latest AS ws-server
+FROM ghcr.io/deephaven/server:0.12.0 AS ws-server
 COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 COPY app.d /app.d

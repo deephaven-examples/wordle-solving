@@ -124,3 +124,7 @@ To stop running in your terminal execute `docker-compose down -v`
 
 - [WORDLE, Python, and crowd-sourcing in real-time](https://deephaven.io/blog/2022/02/11/wordle-2/)
 - [Solve WORDLE on the first guess with real-time data](https://www.youtube.com/watch?v=hEib74gdyWc&t=14s)
+
+## Note
+
+The code in this repository is built for Deephaven Community Core v0.12.0. No guarantee of forwards or backwards compatibility is given.

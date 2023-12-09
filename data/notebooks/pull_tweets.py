@@ -85,7 +85,7 @@ def write_data(all_text, tableWriter):
         id = int(t['id'])
         #if there is a newer Id save that as the new max_id, so tweets are only pulled once each
         if max_id < float(t['id']):
-            globals()['max_id'] = int(t['id'])
+            max_id = int(t['id'])
         dateTime = t['created_at'][:-1]+" NY"
         retweet_count = t['public_metrics']['retweet_count']
         reply_count = t['public_metrics']['reply_count']
